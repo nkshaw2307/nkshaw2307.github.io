@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- PLEASE DO NOT CHANGE FORM ACTION AND INPUT NAMES -->
-    <form id="eshotSignUpForm" action="https://signup.es-mail.co.uk/AddProfile/MjU3Mzo1">
+    <form id="eshotSignUpForm" action="https://signup.es-mail.co.uk/AddProfile/MjU3Mzo5">
 
         <div class="es-signUpForm">
             <div class="es-signUpForm-body">
@@ -15,48 +15,40 @@
 
                 <table>
 	<tr>
+		<td>First Name</td><td><input type='text' name = 'esFirstname_11' id='esFirstname_11' required = 'required'/> </td>
+	</tr><tr>
+		<td>Last Name</td><td><input type='text' name = 'esLastname_12' id='esLastname_12' required = 'required'/> </td>
+	</tr><tr>
 		<td>Email</td><td><input type='text' name = 'esEmail_0' id='esEmail_0' required = 'required'/></td>
 	</tr><tr>
-		<td>First name</td><td><input type='text' name = 'esFirstname_11' id='esFirstname_11' required = 'required'/> </td>
+		<td>Organisation (if for personal interest please state 'personal')</td><td><input type='text' name = 'esCompany_13' id='esCompany_13' required = 'required'/> </td>
 	</tr><tr>
-		<td>Last name</td><td><input type='text' name = 'esLastname_12' id='esLastname_12' required = 'required'/> </td>
+		<td>What would you like to use the survey for</td><td><select name = 'esPNSsurveyUsage_61' id='esPNSsurveyUsage_61' required = 'required'>
+				<option value = "" disabled = "" selected = "" multiple>Please select options below</option>	
+					<option value = "1">1</option>
+					<option value = "2">2</option>
+					<option value = "3">3</option>
+					<option value = "4">4</option>
+			</select></td>
 	</tr><tr>
-		<td>Company</td><td><input type='text' name = 'esCompany_13' id='esCompany_13' required = 'required'/> </td>
-	</tr><tr>
-		<td>Subscription date</td><td><input type='text' name = 'esSubscriptiondate_50' id='esSubscriptiondate_50' class="ComboDatePicker"/> 
-                          <span id='esSubscriptiondate_50' class='ComboDatePicker'>
-                            <select class='es-day'>
-                                <option value=''>Day</option>
-                            </select>
-                            <select class='es-month'>
-                                <option value=''>Month</option>
-                            </select>
-                            <select class='es-year'>
-                                <option value=''>Year</option>
-                            </select>
-                        </span></td>
-	</tr><tr>
-		<td>Are you interested in the User Research Group?</td>
-			<select name = 'esPNuserResearchGroup_59' id='esPNuserResearchGroup_59' required = 'required'>
-				<option value = "" disabled = "" selected = "">Select yes or no</option>	
-					<option value="Yes">Yes</option>
-					<option value="No">No</option>
-			</select>
-			
-		</td>
-	</tr><tr>
-		<td class="prefHeader" colspan="2"><b>Choose News Groups</b></td>
-	</tr><tr>
-		<td></td><td><label><input type='checkbox' name = 'esGrp_30' id='esGrp_30'  /> People_and_Nature_Overall</label></td>
-	</tr><tr>
+		<td>Are you interested in joining this group?</td><td><select name = 'esPNuserResearchGroup_59' id='esPNuserResearchGroup_59' required = 'required'>
+				<option value = "" disabled = "" selected = "">Please select Yes or No</option>	
+					<option value = "Yes">Yes</option>
+					<option value = "No">No</option>
+			</select></td>
+	</tr><!--<tr>
+		<td>PNSscale</td><td><input type='text' name = 'esPNSscale_62' id='esPNSscale_62' /> </td>
+	</tr>--><!-- <tr>
+		<td>PNSenglandOrwales</td><td><input type='text' name = 'esPNSenglandOrwales_60' id='esPNSenglandOrwales_60' /> </td>
+	</tr>--><tr>
 		<td colspan="2">&nbsp;</td>
 	</tr><tr>
-		<td></td><td><label><input type='checkbox' name = 'esSignupConsent' id='esSignupConsent'/> Can you see this consent box?</label></td>
+		<td></td><td><label><input type='checkbox' name = 'esSignupConsent' id='esSignupConsent'/> We take your privacy very seriously. Go&nbsp;<a href="https://www.gov.uk/government/publications/natural-england-privacy-notices/email-subscription-privacy-notice" target="_blank">here&nbsp;</a>to view our Privacy Policy</label></td>
 	</tr>
 </table>
 
                 <div class="signup">
-                    <input type="submit" name="submit" value="Sign Up now please" />
+                    <input type="submit" name="submit" value="Sign Up" />
                 </div>
             </div>
         </div>
