@@ -8,6 +8,40 @@
 </head>
 <body>
     <!-- PLEASE DO NOT CHANGE FORM ACTION AND INPUT NAMES -->
+
+    <!-- proxy change event fired up when user submits form -->
+    <!-- this is to populate the subscription date without the user having to do it themsleves -->
+    <!-- document.getElementById("month").value = today.getMonth()+1; -->
+    <script>
+	
+	function simulateDateChange() {
+
+		today = new Date();
+		console.log(today)
+
+		var elementD = document.getElementById("day");
+		var eventD = new Event('change');
+		elementD.dispatchEvent(eventD);
+		document.getElementById("day").value = today.getDate();
+
+		var elementM = document.getElementById("month");
+		var eventM = new Event('change');
+		elementM.dispatchEvent(eventM);
+		document.getElementById("month").value = today.getMonth();
+		
+		var elementY = document.getElementById("year");
+		var eventY = new Event('change');
+		elementY.dispatchEvent(eventY);
+		document.getElementById("year").value = today.getFullYear();
+
+		console.log(document.getElementById("year").value);
+		console.log(document.getElementById("month").value);
+		console.log(document.getElementById("day").value);
+
+	}
+
+	</script>
+
     <form id="eshotSignUpForm" action="https://signup.es-mail.co.uk/AddProfile/MjU3Mzo5">
 
         <div class="es-signUpForm">
@@ -19,14 +53,14 @@
     <!-- Populating subcription date automatically -->
     <td><input type='text' name = 'esSubscriptiondate_50' id='esSubscriptiondate_50' class="ComboDatePicker" type = "hidden"/>
     <span id='esSubscriptiondate_50' class="ComboDatePicker" hidden>
-            <select class='es-day'>
-                <option value='23'>Day</option>
+            <select id = "day" class='es-day'>
+                <option value=""></option>
             </select>
-            <select class='es-month'>
-                <option value='7'>Month</option>
+            <select id = "month" class='es-month'>
+                <option value=""></option>
             </select>
-            <select class='es-year'>
-            	<option value='2020'>Year</option>
+            <select id = "year" class='es-year'>
+            	<option value=""></option>
             </select>
     </span>
 	</td>
@@ -65,7 +99,7 @@
 	</tr>--><tr>
 		<td colspan="2">&nbsp;</td>
 	</tr><tr>
-		<td></td><td><label><input type='checkbox' name = 'esSignupConsent' id='esSignupConsent'/>I give consent for my data to be processed so that I can be provided with updates <br>on the People and Nature Survey. See our Privacy Policy <a href="https://www.gov.uk/government/publications/natural-england-privacy-notices/email-subscription-privacy-notice" target="_blank">here.</a></label></td>
+		<td></td><td><label><input type='checkbox' name = 'esSignupConsent' id='esSignupConsent' onclick = "simulateDateChange()"/>I give consent for my data to be processed so that I can be provided with updates <br>on the People and Nature Survey. See our Privacy Policy <a href="https://www.gov.uk/government/publications/natural-england-privacy-notices/email-subscription-privacy-notice" target="_blank">here.</a></label></td>
 	</tr>
 </table>
 <br></br>
