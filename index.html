@@ -24,17 +24,17 @@
 		var elementD = document.getElementById("day");
 		var eventD = new Event('change');
 		elementD.dispatchEvent(eventD);
-		//document.getElementById("day").value = today.getDate();
+		document.getElementById("day").value = today.getDate();
 
 		var elementM = document.getElementById("month");
 		var eventM = new Event('change');
 		elementM.dispatchEvent(eventM);
-		//document.getElementById("month").value = monthNames[today.getMonth()];
+		document.getElementById("month").value = monthNames[today.getMonth()];
 		
 		var elementY = document.getElementById("year");
 		var eventY = new Event('change');
 		elementY.dispatchEvent(eventY);
-		//document.getElementById("year").value = today.getFullYear();
+		document.getElementById("year").value = today.getFullYear();
 
 		console.log(document.getElementById("year").value);
 		console.log(document.getElementById("month").value);
@@ -56,13 +56,13 @@
     <td><input type='text' name = 'esSubscriptiondate_50' id='esSubscriptiondate_50' class="ComboDatePicker" type = "hidden"/>
     <span id='esSubscriptiondate_50' class="ComboDatePicker" hidden>
             <select id = "day" class='es-day'>
-                <option value="1"></option>
+                <option value=""></option>
             </select>
             <select id = "month" class='es-month'>
-                <option value="Aug"></option>
+                <option value=""></option>
             </select>
             <select id = "year" class='es-year'>
-            	<option value="2010"></option>
+            	<option value=""></option>
             </select>
     </span>
 	</td>
